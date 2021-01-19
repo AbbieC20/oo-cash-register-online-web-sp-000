@@ -25,11 +25,13 @@ class CashRegister
     @item_list.each do |item|
       new_total += item.cost * item.quantity
     end
+    @total = new_total
   end
 
   def add_item(item, cost, quantity = 1)
     new_item = Item.new(item, cost, quantity)
     @item_list << new_item
+    self.calculate_total
   end
 
   def apply_discount
