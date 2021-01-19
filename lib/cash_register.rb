@@ -21,7 +21,7 @@ class CashRegister
   end
 
   def calculate_total
-    new_total = 0
+    new_total = 0.0
     @item_list.each do |item|
       new_total += item.cost * item.quantity
     end
