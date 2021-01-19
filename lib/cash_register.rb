@@ -49,7 +49,8 @@ class CashRegister
   end
 
   def void_last_transaction
-
+    @item_list.pop
+    self.calculate_total
   end
 
 end
