@@ -45,6 +45,7 @@ class CashRegister
         item_names << item.name
       }
     end
+    return item_names
   end
 
   def void_last_transaction
